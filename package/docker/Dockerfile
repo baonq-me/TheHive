@@ -6,7 +6,8 @@ FROM openjdk:8 as build-env
 
 LABEL MAINTAINER="TheHive Project <support@thehive-project.org>"
 
-ARG THEHIVE_VERSION=develop
+# ARG THEHIVE_VERSION=develop
+ARG THEHIVE_VERSION=main
 
 RUN apt update && \
   apt install -y apt-transport-https && \
@@ -21,7 +22,7 @@ RUN apt update && \
       clone \
       --branch=$THEHIVE_VERSION \
       --depth=1 \
-      https://github.com/TheHive-Project/TheHive.git && \
+      https://github.com/baonq-me/TheHive.git && \
   echo '{"allow_root": true}' > /root/.bowerrc && \
   cd TheHive && \
   ./sbt clean stage && \
