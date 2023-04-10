@@ -12,7 +12,7 @@
                 },
                 link: function(scope) {
                     if (!scope.sizes) {
-                        scope.sizes = [10, 30, 100];
+                        scope.sizes = [10, 30, 100, 1000, 3000, 6000, 9000, 9990];
                     }
                 }
             };
